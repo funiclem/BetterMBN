@@ -14,7 +14,7 @@
       {
         "matches": ["https://*.monbureaunumerique.fr/sg.do*","https://cas.monbureaunumerique.fr/login?*","https://cas.monbureaunumerique.fr/saml/SAMLAssertionConsumer"],
         "css": ["my-styles.css"],
-        "js": ["page-eater.js"]
+        "js": ["codejs.js"]
       }
     ],
 
