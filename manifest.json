@@ -1,0 +1,28 @@
+{
+
+    "manifest_version": 3,
+    "name": "BetterMBN",
+    "version": "1.2022.11.26", 
+    "author": "Funiclem",
+
+    "host_permissions": ["<all_urls>"],
+    "permissions": [
+      "activeTab",
+      "tabs"
+    ],
+    "content_scripts": [
+      {
+        "matches": ["https://*.monbureaunumerique.fr/sg.do*","https://cas.monbureaunumerique.fr/login?*","https://cas.monbureaunumerique.fr/saml/SAMLAssertionConsumer"],
+        "css": ["my-styles.css"],
+        "js": ["page-eater.js"]
+      }
+    ],
+
+
+    "icons": {
+      "48": "icone48.png",
+      "128" : "icone128.png"
+    }
+  
+  }
+  

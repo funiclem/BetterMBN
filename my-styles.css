@@ -1,0 +1,43 @@
+html, .content, .content--has-bar, .js-content, .content-toolbar, .content-filter{
+    background-image:url('https://mobimg.b-cdn.net/v3/fetch/87/87c93aa33275b4c8c73637ad3fbee836.jpeg?w=1200&r=0.5625') !important;
+    background-repeat: no-repeat !important;
+    background-attachment: fixed !important;
+    background-size: cover !important;
+}
+.h5-like{
+    font-family: "Comic Sans MS", cursive, sans-serif !important;
+    font-size: 18px !important;
+    letter-spacing: 0.6px !important;
+    word-spacing: 0.2px !important;
+    color: #5E98FF !important;
+    font-weight: 400 !important;
+    text-decoration: none !important;
+    font-style: italic !important;
+    font-variant: small-caps !important;
+    text-transform: lowercase !important;
+}
+.menu{
+    background-color: #101c4c !important;
+}
+.header{
+    background-color: #101c4c !important;
+}
+span{
+    color:rgb(224, 166, 42) !important;
+}
+body{
+    background-image:url('https://mobimg.b-cdn.net/v3/fetch/87/87c93aa33275b4c8c73637ad3fbee836.jpeg?w=1200&r=0.5625') !important;
+    background-repeat: no-repeat !important;
+    background-attachment: fixed !important;
+    background-size: cover !important;
+}
+#time {
+    font-size: 30px;
+    font-family: 'Roboto', sans-serif;
+    color: #ffffff;
+    text-shadow:
+     -1px -1px 0 #000,
+      1px -1px 0 #000,
+      -1px 1px 0 #000,
+       1px 1px 0 #000;
+  }
