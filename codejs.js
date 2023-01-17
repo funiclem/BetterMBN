@@ -1,3 +1,4 @@
+try{
 document.getElementsByClassName('services-list__item services-list__item--group')[0].remove()
 document.getElementsByClassName('services-list__item services-list__item--group')[1].remove()
 document.getElementsByClassName('services-list__item services-list__item--group')[0].remove()
@@ -18,7 +19,7 @@ document.getElementsByClassName('menu js-menu')[0].append(heure)
 function startTime() {
     var today = new Date();
     var h = today.getHours();
-    var m = today.getMinutes();
+    var m = today.getUTCMinutes();
     var s = today.getUTCSeconds();
     if (s<10){
         s = '0' + s.toString();
@@ -27,7 +28,7 @@ function startTime() {
         h = '0' + h.toString();
     }
     var d = today.getUTCDate();
-    var mo = today.getUTCMonth();
+    var mo = today.getUTCMonth() + 1;
     var a = today.getUTCFullYear();
     if (d<10){
         d = '0' + d.toString();
@@ -46,48 +47,8 @@ function startTime() {
   }
    
   startTime();
+} catch(e){}
 
-
-try {
-    function moyenne2(){
-        var x = document.getElementsByClassName('yui-dt-liner bulletin-note bulletin-note-eleve');
-        calcul=0
-        v=0
-        for (var i = 0; i < x.length; i++) {
-            if(x[i].innerText != ""){
-                console.log(calcul = calcul + parseFloat(x[i].innerText.replace(",",".")))
-                v=v+1
-            }
-    
-        }
-        console.log(resultat=Math.round((calcul/v)*100)/100)
-        return resultat
-    }
-    function moyenneclasse(){
-        var y = document.getElementsByClassName('yui-dt0-col-moyenneClasse yui-dt-col-moyenneClasse') // a faire moyenne classe
-        calcul2=0
-        v2=0
-        for (var a = 1; a < y.length; a++){
-            if(y[a].innerText != ""){
-                console.log(calcul2 = calcul2 + parseFloat(y[a].innerText.replace(",",".")))
-                v2=v2+1
-            }
-        }
-        console.log(resultat2=Math.round((calcul2/v2)*100)/100)
-        return resultat2
-    }
-    var header = document.createElement('h1');
-    header.style.color= 'white'
-    header.style.marginLeft="50px"
-    console.log(document.getElementsByClassName('yui-dt-liner bulletin-note bulletin-note-eleve'));
-    header.textContent = "Moyenne de l'élève : " + moyenne2() + " ╠╣ Moyenne de la classe : " + moyenneclasse();  //moyenne
-    document.getElementById("module_notes").appendChild(header);
-    document.getElementsByClassName('content-filter')[0].remove()
-
-   
-} catch (e){
-
-}
 try{
     
     var header2 = document.createElement('h1');  //travail à faire
@@ -173,8 +134,11 @@ try{
 }catch(e){
     
 }
-
+try{
 const elt = document.getElementsByClassName('contexte_service dsi')[0];    // On récupère l'élément sur lequel on veut détecter le clic
-elt.addEventListener('click', function() {          // On écoute l'événement click
-    Recommence();               // On change le contenu de notre élément pour afficher "C'est cliqué !"
+elt.addEventListener('click', function() {  
+    try{
+    Recommence();
+    } catch(e){}
 });
+}catch(e){}
